@@ -21,8 +21,7 @@ jobs:
           run: |
             echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
             ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
-              mkdir -p /tmp/demodeployment &&
-              cd /tmp/demodeployment &&
+              cd /learningdeployment &&
               git pull origin main &&
               sudo npm install &&
               sudo node index.js
