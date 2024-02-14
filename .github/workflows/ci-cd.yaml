@@ -22,9 +22,12 @@ jobs:
               curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
               . ~/.nvm/nvm.sh
               nvm install --lts
+              rm -rf /home/ubuntu/projects/
               mkdir -p /home/ubuntu/projects
               cd /home/ubuntu/projects
               git clone https://github.com/jitesh1709/learningdeployment.git
               cd learningdeployment
               git pull origin main
+              npm install
+              node index.js
             '
