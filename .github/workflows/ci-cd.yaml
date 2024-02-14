@@ -24,5 +24,7 @@ jobs:
               nvm install --lts
               mkdir -p /home/ubuntu/projects
               cd /home/ubuntu/projects
-              git clone "$GITHUB_REPOSITORY"
+              git clone https://github.com/jitesh1709/learningdeployment.git
+              cd learningdeployment
+              git pull origin main
             '
