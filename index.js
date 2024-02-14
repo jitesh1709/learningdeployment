@@ -1,9 +1,10 @@
 const express = require('express');
 
 const app = express()
- 
-app.listen(3000, '0.0.0.0', () => {
-    console.log('Started on port 3000');
+
+const port = 24
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Started on port ${port}`);
 });
 
 app.get('/get/data', (req, res) => {
