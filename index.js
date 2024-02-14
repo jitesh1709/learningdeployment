@@ -7,5 +7,5 @@ app.listen(3000, '0.0.0.0', () => {
 });
 
 app.get('/get/data', (req, res) => {
-    res.status(200).send('Response sent to  client')
+    res.status(200).send('Response sent to the client')
 })
