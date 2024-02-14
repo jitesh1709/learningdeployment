@@ -21,5 +21,9 @@ jobs:
           run: |
             echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
             ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
-              mkdir -p /tmp/demo
+              curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+              . ~/.nvm/nvm.sh
+              nvm install --lts
+              cd /home/ubuntu/learningdeployment
+              git pull origin main
             '
