@@ -17,9 +17,12 @@ jobs:
             USER_NAME: ${{secrets.EC2_USER}}
           run: |
             echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+            echo "$GITHUB_REPOSITORY"
             ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
               curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
               . ~/.nvm/nvm.sh
               nvm install --lts
-              mkdir -p /home/ubuntu/learningdeployment
+              mkdir -p /home/ubuntu/projects
+              cd /home/ubuntu/projects
+              echo "$GITHUB_REPOSITORY"
             '
