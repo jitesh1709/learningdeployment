@@ -28,7 +28,6 @@ jobs:
               git clone https://github.com/jitesh1709/learningdeployment.git
               cd learningdeployment
               git pull origin main
-              pkill -f node
               npm install
               nohup node index.js
             '
