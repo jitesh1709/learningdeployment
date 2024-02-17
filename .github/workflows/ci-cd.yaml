@@ -29,7 +29,6 @@ jobs:
               cd learningdeployment
               git pull origin main
               pkill -f node
-              echo "Hello"
               npm install
               nohup node index.js
             '
